@@ -16,7 +16,7 @@ const Section = () => {
      if(newValue <=10){
         setSecondCa(newValue)
      }
-      
+       
     }
     const handlefirstCaInput = (e:React.ChangeEvent<HTMLInputElement>)=>{
        const newValue = 
