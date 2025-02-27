@@ -7,6 +7,7 @@ const Section = () => {
     const [thirdCa, setThirdCa] = useState<number>(0)
     const [examscore, setExamScore] = useState<number>(0)
     const [noOfStudent,setnoOfStudent] = useState<number>(0)
+   //  const [classAverage, setClassAverage ] = useState<number>(0)
 
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
       e.preventDefault()
