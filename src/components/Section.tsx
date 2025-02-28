@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { Button } from './ui/button'
 
 const Section = () => {
     const [firstCa, setFirstCa] = useState<number>(0)
@@ -45,7 +45,8 @@ const Section = () => {
     const totalScore = examscore + totalCa
     const classAverage = totalScore / noOfStudent
   return (
-    <div>
+    <div className='bg-blue-100'>
+      <h1 className='text-center text-4xl font-bold text-blue-800'>College Result Publisher</h1>
         <form action="">
             <h2>General Class DATA</h2>
             <label htmlFor="">No of Students in Class</label>
@@ -86,6 +87,7 @@ const Section = () => {
         <p>Total CA <button> {totalCa}</button></p> 
        <p>Student Total Score <button>{totalScore}</button></p>  
        </form>
+       <Button>Click me</Button>
     </div>
   )
 }
