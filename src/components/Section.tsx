@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { Button } from './ui/button'
+import { ThemeProvider } from './Theme/Theme-provider'
+import { ModeToggle } from './Theme/mode-toggle'
+
 
 const Section = () => {
     const [firstCa, setFirstCa] = useState<number>(0)
@@ -46,6 +49,8 @@ const Section = () => {
     const classAverage = totalScore / noOfStudent
   return (
     <div className='bg-blue-100'>
+       <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
+         {ModeToggle()}
       <h1 className='text-center text-4xl font-bold text-blue-800'>College Result Publisher</h1>
         <form action="">
             <h2>General Class DATA</h2>
@@ -88,6 +93,7 @@ const Section = () => {
        <p>Student Total Score <button>{totalScore}</button></p>  
        </form>
        <Button>Click me</Button>
+       </ThemeProvider>
     </div>
   )
 }
