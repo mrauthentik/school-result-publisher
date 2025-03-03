@@ -48,9 +48,8 @@ const Section = () => {
     const totalScore = examscore + totalCa
     const classAverage = totalScore / noOfStudent
   return (
-    <div className='bg-blue-100'>
-       <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-         {ModeToggle()}
+    <div className='grid gap-4 md:grid-cols-2'>
+      
       <h1 className='text-center text-4xl font-bold text-blue-800'>College Result Publisher</h1>
         <form action="">
             <h2>General Class DATA</h2>
@@ -93,7 +92,7 @@ const Section = () => {
        <p>Student Total Score <button>{totalScore}</button></p>  
        </form>
        <Button>Click me</Button>
-       </ThemeProvider>
+     
     </div>
   )
 }
