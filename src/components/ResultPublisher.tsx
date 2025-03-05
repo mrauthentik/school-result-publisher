@@ -38,9 +38,16 @@ export function ResultPublisher(){
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
         const {name, value} = e.target
 
-        if(name === "test1" || name === "test2" || name === "test3" || name === "exam"){
-           const score = Math.min(Math.max(0, Number(value)), 10 | 10)
+        if(name === "test1" || name === "test2" || name === "test3" ){
+           const score = Math.min(Math.max(0, Number(value)), 10)
            setCurrentStudent({...currentStudent, [name]:score})
+        }else{
+            setCurrentStudent({...currentStudent, [name]: value})
+        }
+        //Logic to Validate Exam Score
+        if(name === "exam"){
+            const score = Math.min(Math.max(0, Number(value)), 70)
+            setCurrentStudent({...currentStudent, [name]: score})
         }else{
             setCurrentStudent({...currentStudent, [name]: value})
         }
@@ -53,7 +60,7 @@ export function ResultPublisher(){
         }
 
         //Logic to calculate Student Average
-        const average = (currentStudent.test1 + currentStudent.test2 + currentStudent.test3 + currentStudent.exam) / 9
+        const average = (currentStudent.test1 + currentStudent.test2 + currentStudent.test3 + currentStudent.exam) / totalStudents
         
 
         //Code adds student to the list
@@ -102,6 +109,17 @@ export function ResultPublisher(){
                     <div className="flex items-center gap-2">
                         <Label htmlFor="totalStudents" className="text-sm font-medium">
                             Class Size:
+                        </Label>
+                        <Input
+                            id="totalStudents"
+                            type="number"
+                            value={totalStudents}
+                            onChange={(e) => setTotalStudents(Number.parseInt(e.target.value) || 0)}
+                            className="w-20 h-8"
+                            min={0}
+                        />
+                        <Label htmlFor="totalStudents" className="text-sm font-medium">
+                           NO Subjects:
                         </Label>
                         <Input
                             id="totalStudents"
