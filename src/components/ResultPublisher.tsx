@@ -118,7 +118,7 @@ export function ResultPublisher(){
                             className="w-20 h-8"
                             min={0}
                         />
-                        <Label htmlFor="totalStudents" className="text-sm font-medium">
+                        {/* <Label htmlFor="totalStudents" className="text-sm font-medium">
                            NO Subjects:
                         </Label>
                         <Input
@@ -128,7 +128,7 @@ export function ResultPublisher(){
                             onChange={(e) => setTotalStudents(Number.parseInt(e.target.value) || 0)}
                             className="w-20 h-8"
                             min={0}
-                        />
+                        /> */}
                     </div>
                 </div>
             </CardHeader>
