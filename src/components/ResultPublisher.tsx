@@ -60,7 +60,7 @@ export function ResultPublisher(){
         }
 
         //Logic to calculate Student Average
-        const average = (currentStudent.test1 + currentStudent.test2 + currentStudent.test3 + currentStudent.exam) / totalStudents
+        const average = (currentStudent.test1 + currentStudent.test2 + currentStudent.test3 + currentStudent.exam) / 4
         
 
         //Code adds student to the list
