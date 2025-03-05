@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter,CardHeader, CardTitle } 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { ScrollArea } from "./ui/scroll-area";
 import { ClassStatistics } from "./ClassStatistics";
+import { StudentResultsTable } from "./StudentResultTabel";
 import { Label } from "./ui/label";
 import {Input} from "./ui/input";
 import { Button } from "./ui/button";
