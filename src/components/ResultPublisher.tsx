@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter,CardHeader, CardTitle } from "./ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
+import { Label } from "./ui/label";
 import { PlusCircle, Save, Trash2, Users } from "lucide-react";
 
 
@@ -86,35 +87,22 @@ export function ResultPublisher(){
 
     return(
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="card md:col-span-12">
-            <div className="card-header pb-3">
-                <div className="card-content flex items-center justify-between">
+         <Card className="md:col-span-12">
+            <CardHeader className="pb-3">
+                <div className="flex items-center justify-between">
                     <div>
-                        <h2>Student Results Management</h2>
-                        <h3>Add student scores and view class Statistics</h3>
+                        <CardTitle>Student Results Management</CardTitle>
+                        <CardDescription> Add student scores and view class statistics</CardDescription>
                     </div>
-                    <div className="flex items-center gap">
-                        <label htmlFor="totalStudents" className="text-sm font-medium">
-                            Class Size
-                        </label>
-                        <input 
-                            type="number" 
-                            id="totalStudents"
-                            value={totalStudents}
-                            onChange={(e) => setTotalStudents(Number.parseFloat(e.target.value) || 0)}
-                            min={0}
-                        />
+                    <div className="flex items-center gap-2">
+                        <Label htmlFor="totalStudents" className="text-sm font-medium">
+                            Class Size:
+                        </Label>
+                        
                     </div>
                 </div>
-            </div>
-
-            <section className="p-0">
-                <div className="button-list w-full" value={activeTab}>
-
-                </div>
-            </section>
-
-          </div>
+            </CardHeader>
+         </Card>
         </div>
     )
 
