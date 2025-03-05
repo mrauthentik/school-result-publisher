@@ -39,7 +39,7 @@ export function ResultPublisher(){
         const {name, value} = e.target
 
         if(name === "test1" || name === "test2" || name === "test3" || name === "exam"){
-           const score = Math.min(Math.max(0, Number(value)), 70 | 10)
+           const score = Math.min(Math.max(0, Number(value)), 10 | 10)
            setCurrentStudent({...currentStudent, [name]:score})
         }else{
             setCurrentStudent({...currentStudent, [name]: value})
@@ -146,37 +146,37 @@ export function ResultPublisher(){
 
               <div className="grid gap-4 md:grid-cols-4 mt-4">
                 <div>
-                  <Label htmlFor="test1">Test 1 (0-100)</Label>
+                  <Label htmlFor="test1">Test 1 (0-10)</Label>
                   <Input
                     id="test1"
                     name="test1"
                     type="number"
                     min={0}
-                    max={100}
+                    max={10}
                     value={currentStudent.test1}
                     onChange={handleInputChange}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="test2">Test 2 (0-100)</Label>
+                  <Label htmlFor="test2">Test 2 (0-10)</Label>
                   <Input
                     id="test2"
                     name="test2"
                     type="number"
                     min={0}
-                    max={100}
+                    max={10}
                     value={currentStudent.test2}
                     onChange={handleInputChange}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="test3">Test 3 (0-100)</Label>
+                  <Label htmlFor="test3">Test 3 (0-10)</Label>
                   <Input
                     id="test3"
                     name="test3"
                     type="number"
                     min={0}
-                    max={100}
+                    max={10}
                     value={currentStudent.test3}
                     onChange={handleInputChange}
                   />
