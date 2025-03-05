@@ -96,7 +96,7 @@ export function ResultPublisher(){
             <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                     <div>
-                        <CardTitle> <h1>Welcome to </h1>Student Results Management</CardTitle>
+                        <CardTitle> Student Results Management</CardTitle>
                         <CardDescription> Add student scores and view class statistics</CardDescription>
                     </div>
                     <div className="flex items-center gap-2">
