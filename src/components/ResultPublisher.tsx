@@ -200,7 +200,7 @@ export function ResultPublisher(){
                   />
                 </div>
                 <div>
-                  <Label htmlFor="exam">Exam (0-100)</Label>
+                  <Label htmlFor="exam">Exam (0-70)</Label>
                   <Input
                     id="exam"
                     name="exam"
