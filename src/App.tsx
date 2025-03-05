@@ -1,11 +1,12 @@
 import './App.css'
-import Section from './components/Section'
+
+import { StudentResultsTable } from './components/StudentResultTabel'
 
 function App() {
   return (
     <div>
       
-      <Section />
+      <StudentResultsTable students={[]} />
     </div>
   )
 }

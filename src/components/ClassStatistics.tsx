@@ -1,5 +1,3 @@
-"use client"
-
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Student } from "./ResultPublisher"
@@ -94,7 +92,7 @@ export function ClassStatistics({ students, totalStudents, classAverage }: Class
                 <XAxis dataKey="grade" />
                 <YAxis />
                 <Tooltip
-                  formatter={(value, name, props) => [`${value} students (${props.payload.percentage}%)`, "Count"]}
+                  formatter={(value,name, props) => [`${value} students (${props.payload.percentage}%)`, "Count"]}
                 />
                 <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]} />
               </BarChart>
