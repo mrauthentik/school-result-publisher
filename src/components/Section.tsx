@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { Button } from './ui/button'
-import { ThemeProvider } from './Theme/Theme-provider'
-import { ModeToggle } from './Theme/mode-toggle'
 
 
 const Section = () => {
