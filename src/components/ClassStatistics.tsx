@@ -92,7 +92,7 @@ export function ClassStatistics({ students, totalStudents, classAverage }: Class
                 <XAxis dataKey="grade" />
                 <YAxis />
                 <Tooltip
-                  formatter={(value,name, props) => [`${value} students (${props.payload.percentage}%)`, "Count"]}
+                  formatter={(value,name, props) => [`${value} ${name} (${props.payload.percentage}%)`, "Count"]}
                 />
                 <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]} />
               </BarChart>
